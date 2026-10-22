@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/lib/generated/prisma
+
+# AI Assistant Local Configs (NEVER COMMIT THESE)
+.agents/
+.claude/
+.windsurf/
+skills-lock.json
+.cursorrules
+.vscode/settings.json

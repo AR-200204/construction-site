@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model leads {
+  id        String   @id @default(dbgenerated("(gen_random_uuid())::text"))
+  firstname String
+  lastname  String
+  email     String
+  phone     String?
+  service   String?
+  message   String
+  status    String   @default("new")
+  createdat DateTime @default(now())
+  updatedat DateTime @default(now())
+}
